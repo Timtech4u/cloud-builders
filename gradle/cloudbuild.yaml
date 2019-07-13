@@ -39,13 +39,8 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'tag'
-  - 'gcr.io/$PROJECT_ID/gradle:4.6-jdk-8'
+  - 'gcr.io/$PROJECT_ID/gradle:latest'
   - 'gcr.io/$PROJECT_ID/java/gradle'
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-  - 'tag'
-  - 'gcr.io/$PROJECT_ID/gradle:4.6-jdk-8'
-  - 'gcr.io/$PROJECT_ID/gradle'
 
 # Run examples
 - name: 'gcr.io/$PROJECT_ID/gradle:4.6-jdk-8'
