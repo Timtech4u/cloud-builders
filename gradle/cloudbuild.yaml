@@ -42,28 +42,6 @@ steps:
   - 'gcr.io/$PROJECT_ID/gradle:latest'
   - 'gcr.io/$PROJECT_ID/java/gradle'
 
-# Run examples
-- name: 'gcr.io/$PROJECT_ID/gradle:4.6-jdk-8'
-  args: ['build']
-  dir: 'examples/spring_boot'
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '.']
-  dir: 'examples/spring_boot'
-
-- name: 'gcr.io/$PROJECT_ID/gradle:4.0-jdk-8'
-  args: ['build']
-  dir: 'examples/spring_boot'
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '.']
-  dir: 'examples/spring_boot'
-
-- name: 'gcr.io/$PROJECT_ID/gradle:3.5-jdk-8'
-  args: ['build']
-  dir: 'examples/spring_boot'
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '.']
-  dir: 'examples/spring_boot'
-
 images:
 - 'gcr.io/$PROJECT_ID/gradle'
 - 'gcr.io/$PROJECT_ID/gradle:4.6-jdk-8'
